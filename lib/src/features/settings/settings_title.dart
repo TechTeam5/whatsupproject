@@ -13,7 +13,6 @@ class SettingsTile extends StatelessWidget {
     required this.title,
     required this.leading,
     this.trailing,
-
     required this.onTap,
   }) : super(key: key);
 
