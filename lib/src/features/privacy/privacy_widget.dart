@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../core/widget/settings_widget.dart';
+import '../../core/widget/privacy_list_widget.dart';
 
 class PrivacyPage extends StatefulWidget {
   @override
@@ -8,7 +8,7 @@ class PrivacyPage extends StatefulWidget {
   }
 
 class _SettingsScreenState extends State<PrivacyPage> {
-  bool notifyauthors = false;
+  bool notifyAuthors = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,23 +29,23 @@ class _SettingsScreenState extends State<PrivacyPage> {
             padding: const EdgeInsets.all(8.0),
             child: Column(
               children: [
-                SettingsList(
+                privacyListWidget(
                   subtitle: "Who can see my personal info",
                   title: '',
                 ),
-                SettingsList(title: "Last seen and online", subtitle: "My contacts"),
-                SettingsList(title: "profile page", subtitle: "My contacts"),
-                SettingsList(title: "About", subtitle: "My contacts"),
-                SettingsList(title: "Status", subtitle: "My contact"),
+                privacyListWidget(title: "Last seen and online", subtitle: "My contacts"),
+                privacyListWidget(title: "profile page", subtitle: "My contacts"),
+                privacyListWidget(title: "About", subtitle: "My contacts"),
+                privacyListWidget(title: "Status", subtitle: "My contact"),
                 ListTile(
                   title: Text("Read receipts"),
                   subtitle: Text("if turned off,you won't send receive Read recepits.Read recepits are always sent for group chats"),
                   trailing: Switch(
-                    value: notifyauthors,
+                    value: notifyAuthors,
                     activeColor: Colors.green[900],
                     onChanged: (bool value) {
                       setState(() {
-                        notifyauthors = value;
+                        notifyAuthors = value;
                       }
                       );
                     },
@@ -55,20 +55,20 @@ class _SettingsScreenState extends State<PrivacyPage> {
                   height: 1,
                   color: Colors.grey,
                 ),
-                SettingsList(
+                privacyListWidget(
                   subtitle: "Disssappearing messages",
                   title: '',
                 ),
-                SettingsList(title: "Default message timer", subtitle: "Start new chats with disappearing messages set to your timer"),
+                privacyListWidget(title: "Default message timer", subtitle: "Start new chats with disappearing messages set to your timer"),
                 Divider(
                   height: 1,
                   color: Colors.grey,
                 ),
-                SettingsList(title: "Groups", subtitle: "Everyone"),
-                SettingsList(title: "Live location", subtitle: "None"),
-                SettingsList(title: "Calls", subtitle: "Silence unknown callers"),
-                SettingsList(title: "Blocked contacts", subtitle: "None"),
-                SettingsList(title: "Fingerpriny lock", subtitle: "Enabled after 1 minute"),
+                privacyListWidget(title: "Groups", subtitle: "Everyone"),
+                privacyListWidget(title: "Live location", subtitle: "None"),
+                privacyListWidget(title: "Calls", subtitle: "Silence unknown callers"),
+                privacyListWidget(title: "Blocked contacts", subtitle: "None"),
+                privacyListWidget(title: "Fingerpriny lock", subtitle: "Enabled after 1 minute"),
               ],
             ),
           ),

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class SettingsList extends StatelessWidget {
+class privacyListWidget extends StatelessWidget {
   final String title;
   final String subtitle;
   final Icon? icon;
 
-  const SettingsList({super.key, required this.title, required this.subtitle, this.icon});
+  const privacyListWidget({super.key, required this.title, required this.subtitle, this.icon});
 
   @override
   Widget build(BuildContext context) {
