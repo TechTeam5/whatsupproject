@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:whatsup/src/features/chat/chat_list_icon_widget.dart';
 
 class ChatListWiget extends StatelessWidget {
-  const ChatListWiget({super.key});
+  const ChatListWiget({super.key, });
   @override
   Widget build(BuildContext context) {
     return ListView(
