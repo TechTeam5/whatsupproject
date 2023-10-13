@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:whatsup/src/features/notification/notifi_page.dart';
 import 'package:whatsup/src/pages/homepage.dart';
 
 void main() {
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
 
       debugShowCheckedModeBanner: false,
-      home: homepage(),
+      home: NotificationPage(),
     );
   }
 }
