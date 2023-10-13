@@ -19,7 +19,7 @@ class _SettingsMenuState extends State<SettingsMenu> {
   // }
 
   void logout() {
-    // TODO: Implement this function to log the user out of the app
+
   }
 
   @override

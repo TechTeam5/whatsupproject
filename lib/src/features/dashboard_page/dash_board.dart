@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:whatsup/src/features/chat/chatlist_widget.dart';
 
 import 'package:whatsup/src/features/settings/settings.dart';
+
+import '../search/search_page.dart';
 
 class DashboardPage extends StatefulWidget {
   const DashboardPage({super.key});
@@ -26,7 +29,10 @@ class _DashboardPageState extends State<DashboardPage>
           backgroundColor: Color(0xff075e54),
           title: Text("Whatsapp"),
           actions: [
-            IconButton(onPressed: () {}, icon: Icon(Icons.search)),
+            IconButton(onPressed: () {
+              Navigator.of(mainContext).push(MaterialPageRoute(
+                  builder: (context) => SearchScreen()));
+            }, icon: Icon(Icons.search)),
             PopupMenuButton<String>(onSelected: (value) {
               if (value == "Settings") {
                 Navigator.of(mainContext).push(MaterialPageRoute(
@@ -75,6 +81,7 @@ class _DashboardPageState extends State<DashboardPage>
                 ),
                 Tab(
                   text: "Chats",
+
                 ),
                 Tab(
                   text: "Status",
@@ -85,7 +92,9 @@ class _DashboardPageState extends State<DashboardPage>
               ])),
       body: SafeArea(
           child: TabBarView(
-            children: [],
+            children: [
+             ChatListWiget(),
+            ],
             controller: tabController,
           )),
     );
