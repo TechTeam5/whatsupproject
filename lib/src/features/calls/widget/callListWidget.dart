@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:whatsup/src/core/profile_images/profile_pictures.dart';
 import 'package:whatsup/src/features/calls/widget/call_list_icon_widget.dart';
 import '../constants/strings.dart';
 class CallListWidget extends StatelessWidget {
@@ -8,62 +9,52 @@ class CallListWidget extends StatelessWidget {
     return ListView(
       children: [
         CallListIconWidget(
-          image:
-              "https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v1013-p-0019d-01-ksi8b5jn.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=105acc73dbd66de4e097301c10eb6af5",
+          image:ProfilePicture.image1,
           title: Strings.name1,
           subTitle: DateTime(2023, 09, 13, 1, 20),
         ),
         CallListIconWidget(
-          image:
-              "https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v1013-p-0019d-01-ksi8b5jn.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=105acc73dbd66de4e097301c10eb6af5",
+          image:ProfilePicture.image2,
           title: Strings.name2,
           subTitle: DateTime(2023, 09, 13, 1, 20),
         ),
         CallListIconWidget(
-          image:
-              "https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v1013-p-0019d-01-ksi8b5jn.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=105acc73dbd66de4e097301c10eb6af5",
+          image:ProfilePicture.image3,
           title: Strings.name3,
           subTitle: DateTime(2023, 09, 13, 1, 20),
         ),
         CallListIconWidget(
-          image:
-              "https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v1013-p-0019d-01-ksi8b5jn.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=105acc73dbd66de4e097301c10eb6af5",
+          image:ProfilePicture.image4,
           title: Strings.name4,
           subTitle: DateTime(2023, 09, 13, 1, 20),
         ),
         CallListIconWidget(
-          image:
-              "https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v1013-p-0019d-01-ksi8b5jn.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=105acc73dbd66de4e097301c10eb6af5",
+          image:ProfilePicture.image5,
           title: Strings.name5,
           subTitle: DateTime(2023, 09, 13, 1, 20),
         ),
         CallListIconWidget(
-          image:
-              "https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v1013-p-0019d-01-ksi8b5jn.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=105acc73dbd66de4e097301c10eb6af5",
+          image:ProfilePicture.image6,
           title: Strings.name6,
           subTitle: DateTime(2023, 09, 13, 1, 20),
         ),
         CallListIconWidget(
-          image:
-              "https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v1013-p-0019d-01-ksi8b5jn.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=105acc73dbd66de4e097301c10eb6af5",
+          image:ProfilePicture.image7,
           title: Strings.name7,
           subTitle: DateTime(2023, 09, 13, 1, 20),
         ),
         CallListIconWidget(
-          image:
-              "https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v1013-p-0019d-01-ksi8b5jn.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=105acc73dbd66de4e097301c10eb6af5",
+          image:ProfilePicture.image8,
           title: Strings.name8,
           subTitle: DateTime(2023, 09, 13, 1, 20),
         ),
         CallListIconWidget(
-          image:
-              "https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v1013-p-0019d-01-ksi8b5jn.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=105acc73dbd66de4e097301c10eb6af5",
+          image:ProfilePicture.image9,
           title: Strings.name9,
           subTitle: DateTime(2023, 09, 13, 1, 20),
         ),
         CallListIconWidget(
-          image:
-              "https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v1013-p-0019d-01-ksi8b5jn.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=105acc73dbd66de4e097301c10eb6af5",
+          image:ProfilePicture.image10,
           title: Strings.name10,
           subTitle: DateTime(2023, 09, 13, 1, 20),
         ),
