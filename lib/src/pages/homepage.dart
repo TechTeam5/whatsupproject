@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:whatsup/src/features/calls/CallListWidget.dart';
+import 'package:whatsup/src/features/calls/widget/callListWidget.dart';
 import 'package:whatsup/src/features/chat/chatlist_widget.dart';
-import 'package:whatsup/src/features/community/CommunityListWidget.dart';
-import 'package:whatsup/src/features/status/StatusListWidget.dart';
+import 'package:whatsup/src/features/community/communityListWidget.dart';
+import 'package:whatsup/src/features/status/statusListWidget.dart';
 
 class homepage extends StatefulWidget {
   const homepage({super.key});
