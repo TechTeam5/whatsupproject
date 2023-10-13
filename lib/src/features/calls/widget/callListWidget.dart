@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:whatsup/src/features/calls/widget/call_list_icon_widget.dart';
 import '../../../core/images/images.dart';
 import '../constants/strings.dart';
+
 class CallListWidget extends StatelessWidget {
   const CallListWidget({super.key});
   @override
@@ -9,52 +10,52 @@ class CallListWidget extends StatelessWidget {
     return ListView(
       children: [
         CallListIconWidget(
-          image:Images.image1,
+          image: Images.image1,
           title: Strings.name1,
           subTitle: DateTime(2023, 09, 13, 1, 20),
         ),
         CallListIconWidget(
-          image:Images.image2,
+          image: Images.image2,
           title: Strings.name2,
           subTitle: DateTime(2023, 09, 13, 1, 20),
         ),
         CallListIconWidget(
-          image:Images.image3,
+          image: Images.image3,
           title: Strings.name3,
           subTitle: DateTime(2023, 09, 13, 1, 20),
         ),
         CallListIconWidget(
-          image:Images.image4,
+          image: Images.image4,
           title: Strings.name4,
           subTitle: DateTime(2023, 09, 13, 1, 20),
         ),
         CallListIconWidget(
-          image:Images.image5,
+          image: Images.image5,
           title: Strings.name5,
           subTitle: DateTime(2023, 09, 13, 1, 20),
         ),
         CallListIconWidget(
-          image:Images.image6,
+          image: Images.image6,
           title: Strings.name6,
           subTitle: DateTime(2023, 09, 13, 1, 20),
         ),
         CallListIconWidget(
-          image:Images.image7,
+          image: Images.image7,
           title: Strings.name7,
           subTitle: DateTime(2023, 09, 13, 1, 20),
         ),
         CallListIconWidget(
-          image:Images.image8,
+          image: Images.image8,
           title: Strings.name8,
           subTitle: DateTime(2023, 09, 13, 1, 20),
         ),
         CallListIconWidget(
-          image:Images.image9,
+          image: Images.image9,
           title: Strings.name9,
           subTitle: DateTime(2023, 09, 13, 1, 20),
         ),
         CallListIconWidget(
-          image:Images.image10,
+          image: Images.image10,
           title: Strings.name10,
           subTitle: DateTime(2023, 09, 13, 1, 20),
         ),
