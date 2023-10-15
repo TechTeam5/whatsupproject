@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:whatsup/src/core/constants/strings.dart';
 
 import '../../core/widget/privacy_list_widget.dart';
 
@@ -16,7 +17,7 @@ class _SettingsScreenState extends State<PrivacyPage> {
         leading: BackButton(
           color: Colors.white,
         ),
-        title: Text('Privacy',
+        title: Text(Strings.privacy,
           style: TextStyle(
               color: Colors.white
           ),
@@ -30,7 +31,7 @@ class _SettingsScreenState extends State<PrivacyPage> {
             child: Column(
               children: [
                 privacyListWidget(
-                  subtitle: "Who can see my personal info",
+                  subtitle: Strings.sub1,
                   title: '',
                 ),
                 privacyListWidget(title: "Last seen and online", subtitle: "My contacts"),
@@ -38,8 +39,8 @@ class _SettingsScreenState extends State<PrivacyPage> {
                 privacyListWidget(title: "About", subtitle: "My contacts"),
                 privacyListWidget(title: "Status", subtitle: "My contact"),
                 ListTile(
-                  title: Text("Read receipts"),
-                  subtitle: Text("if turned off,you won't send receive Read recepits.Read recepits are always sent for group chats"),
+                  title: Text(Strings.title1),
+                  subtitle: Text(Strings.sub2),
                   trailing: Switch(
                     value: notifyAuthors,
                     activeColor: Colors.green[900],
@@ -56,10 +57,11 @@ class _SettingsScreenState extends State<PrivacyPage> {
                   color: Colors.grey,
                 ),
                 privacyListWidget(
-                  subtitle: "Disssappearing messages",
+                  subtitle: Strings.sub3,
                   title: '',
                 ),
-                privacyListWidget(title: "Default message timer", subtitle: "Start new chats with disappearing messages set to your timer"),
+                privacyListWidget(title: Strings.title2,
+                    subtitle: Strings.sub4),
                 Divider(
                   height: 1,
                   color: Colors.grey,
