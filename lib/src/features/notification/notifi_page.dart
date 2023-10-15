@@ -1,250 +1,196 @@
 import 'package:flutter/material.dart';
 
+import '../../core/constants/strings.dart';
+import 'package:whatsup/src/core/color/color.dart';
 
-class NotificationPage extends StatefulWidget {
-  NotificationPage({super.key});
+
+class NotificationSettings extends StatefulWidget {
+  const NotificationSettings({super.key});
 
   @override
-  State<NotificationPage> createState() => _NotificationPageState();
+  State<NotificationSettings> createState() => _NotificatinSettingsState();
 }
 
-class _NotificationPageState extends State<NotificationPage> {
+class _NotificatinSettingsState extends State<NotificationSettings> {
   bool isSwitched = false;
-  var textValue = 'Switch is OFF';
+  var textValue = Strings.switchoff;
 
   void toggleSwitch(bool value) {
     if (isSwitched == false) {
       setState(() {
         isSwitched = true;
-        textValue = 'Switch Button is ON';
+        textValue = Strings.switchon;
       });
-      print('Switch Button is ON');
     } else {
       setState(() {
         isSwitched = false;
-        textValue = 'Switch Button is OFF';
+        textValue = Strings.switchoff;
       });
-      print('Switch Button is OFF');
     }
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: SingleChildScrollView(
-          child: Column(children: [
-            AppBar(
-              leading: IconButton(
-                onPressed: () {},
-                icon: Icon(Icons.arrow_back),
-              ),
-              backgroundColor: Colors.teal[900],
-              title: Text("Notification"),
+        body: SingleChildScrollView(
+      child: Column(
+        children: [
+          AppBar(
+            leading: IconButton(onPressed: () {}, icon: Icon(Icons.arrow_back)),
+            title: Text(Strings.NotificationText),
+            backgroundColor: ColorConstants.kPrimaryColor,
+          ),
+          ListTile(
+            title: Text(
+              Strings.Conversationtonestext,
+              style: TextStyle(fontWeight: FontWeight.w500),
             ),
-            SizedBox(
-              height: 20,
+            subtitle: Text(Strings.Conversationtonestext),
+            leading: Icon(Icons.brightness_7_outlined),
+            trailing: Switch(
+              onChanged: toggleSwitch,
+              value: isSwitched,
+              activeColor: ColorConstants.kPrimaryColor,
+              activeTrackColor: ColorConstants.kPrimaryColor,
+              inactiveThumbColor: ColorConstants.kSecondaryColor,
+              inactiveTrackColor: ColorConstants.kSecondaryColor,
             ),
-            ListTile(
-              title: Text(
-                "Coversation tones",
-                style: TextStyle(fontWeight: FontWeight.w500),
-              ),
-              subtitle:
-              Text("Play sounds for incoming and outgoing \nmessages"),
-              trailing: Switch(
-                onChanged: toggleSwitch,
-                value: isSwitched,
-                activeColor: Colors.green,
-                activeTrackColor: Colors.green,
-                inactiveThumbColor: Colors.grey,
-                inactiveTrackColor: Colors.grey,
-              ),
-            ),
-            Divider(
-                height: 20, thickness: 1, indent: 4, color: Colors.grey[100]),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(20, 10, 0, 0),
-              child: Container(
-                height: 33,
-                width: MediaQuery.of(context).size.width,
-                child: Text(
-                  "Messages",
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold, color: Colors.grey),
-                ),
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
+            child: Container(
+              height: 33,
+              width: MediaQuery.of(context).size.width,
+              child: Text(
+                Strings.message,
+                style:
+                    TextStyle(color: ColorConstants.kSecondaryColor, fontWeight: FontWeight.bold),
               ),
             ),
-            ListTile(
-              title: Text(
-                "Notification tone",
-                style: TextStyle(fontWeight: FontWeight.w500),
-              ),
-              subtitle: Text("Default(Fadeln.ogg)"),
+          ),
+          ListTile(
+            title: Text(
+              Strings.NotificationtoneText,
+              style: TextStyle(fontWeight: FontWeight.w500),
             ),
-            SizedBox(
-              height: 10,
+            subtitle: Text(Strings.sfxtext),
+          ),
+          ListTile(
+            title: Text(
+              Strings.vibrate,
+              style: TextStyle(fontWeight: FontWeight.w500),
             ),
-            ListTile(
-              title: Text(
-                "Vibrate",
-                style: TextStyle(fontWeight: FontWeight.bold),
-              ),
-              subtitle: Text("Default"),
+            subtitle: Text(Strings.defaulttext),
+          ),
+          ListTile(
+            title: Text(
+              Strings.light,
+              style: TextStyle(fontWeight: FontWeight.w500),
             ),
-            ListTile(
-              title: Text(
-                "Popup Notification",
-                style: TextStyle(fontWeight: FontWeight.w300),
-              ),
-              subtitle: Text("Not available"),
+            subtitle: Text(Strings.white),
+          ),
+          ListTile(
+            title: Text(
+              Strings.text1,
+              style: TextStyle(fontWeight: FontWeight.w500),
             ),
-            ListTile(
-              title: Text(
-                "Light",
-                style: TextStyle(fontWeight: FontWeight.w500),
-              ),
-              subtitle: Text("White"),
+            subtitle:
+                Text(Strings.text2),
+            trailing: Switch(
+              onChanged: toggleSwitch,
+              value: isSwitched,
+              activeColor: ColorConstants.kPrimaryColor,
+              activeTrackColor: ColorConstants.kPrimaryColor,
+              inactiveThumbColor: ColorConstants.kSecondaryColor,
+              inactiveTrackColor: ColorConstants.kSecondaryColor,
             ),
-            SizedBox(
-              height: 10,
+          ),
+          ListTile(
+            title: Text(
+              Strings.txt3,
+              style: TextStyle(fontWeight: FontWeight.w500),
             ),
-            ListTile(
-              title: Text(
-                "Use high Priority notifications",
-                style: TextStyle(fontWeight: FontWeight.w500),
-              ),
-              subtitle: Text(
-                  "Show previews of notifications at the top \n of the screen"),
-              trailing: Switch(
-                onChanged: toggleSwitch,
-                value: isSwitched,
-                activeColor: Colors.green,
-                activeTrackColor: Colors.green,
-                inactiveThumbColor: Colors.grey,
-                inactiveTrackColor: Colors.grey,
-              ),
+            subtitle: Text(
+                Strings.txt4),
+            trailing: Switch(
+              onChanged: toggleSwitch,
+              value: isSwitched,
+              activeColor: ColorConstants.kPrimaryColor,
+              activeTrackColor: ColorConstants.kPrimaryColor,
+              inactiveThumbColor: ColorConstants.kSecondaryColor,
+              inactiveTrackColor: ColorConstants.kSecondaryColor,
             ),
-            SizedBox(
-              height: 10,
-            ),
-            ListTile(
-              title: Text(
-                "Reaction Notifications",
-                style: TextStyle(fontWeight: FontWeight.w500),
-              ),
-              subtitle: Text(
-                  "Show notifications for reactions to \n  messages you send"),
-              trailing: Switch(
-                onChanged: toggleSwitch,
-                value: isSwitched,
-                activeColor: Colors.green,
-                activeTrackColor: Colors.green,
-                inactiveThumbColor: Colors.grey,
-                inactiveTrackColor: Colors.grey,
-              ),
-            ),
-            Divider(
-                height: 20, thickness: 1, indent: 4, color: Colors.grey[100]),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(20, 20, 0, 0),
-              child: Container(
-                height: 33,
-                width: MediaQuery.of(context).size.width,
-                child: Text(
-                  "Groups",
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold, color: Colors.grey),
-                ),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
+            child: Container(
+              height: 33,
+              width: MediaQuery.of(context).size.width,
+              child: Text(
+                Strings.groupstxt,
+                style:
+                    TextStyle(color: ColorConstants.kSecondaryColor, fontWeight: FontWeight.bold),
               ),
             ),
-            ListTile(
-              title: Text(
-                "Notification tone",
-                style: TextStyle(fontWeight: FontWeight.w500),
-              ),
-              subtitle: Text("Deafult(Fadlen.ogg)"),
+          ),
+          ListTile(
+            title: Text(
+              Strings.NotificationtoneText,
+              style: TextStyle(fontWeight: FontWeight.w500),
             ),
-            ListTile(
-              title: Text(
-                "Vibrate",
-                style: TextStyle(fontWeight: FontWeight.w500),
-              ),
-              subtitle: Text("Default"),
+            subtitle: Text(Strings.sfxtext),
+          ),
+          ListTile(
+            title: Text(
+              Strings.vibrate,
+              style: TextStyle(fontWeight: FontWeight.w500),
             ),
-            ListTile(
-              title: Text(
-                "Light",
-                style: TextStyle(fontWeight: FontWeight.w500),
-              ),
-              subtitle: Text("White"),
+            subtitle: Text(Strings.defaulttext),
+          ),
+          ListTile(
+            title: Text(
+              Strings.light,
+              style: TextStyle(fontWeight: FontWeight.w500),
             ),
-            ListTile(
-              title: Text(
-                "Use high Priority notifications",
-                style: TextStyle(fontWeight: FontWeight.w500),
-              ),
-              subtitle: Text(
-                  "Show previews of notifications at the top \n of the screen"),
-              trailing: Switch(
-                onChanged: toggleSwitch,
-                value: isSwitched,
-                activeColor: Colors.green,
-                activeTrackColor: Colors.green,
-                inactiveThumbColor: Colors.grey,
-                inactiveTrackColor: Colors.grey,
-              ),
+            subtitle: Text(Strings.white),
+          ),
+          ListTile(
+            title: Text(
+              Strings.text1,
+              style: TextStyle(fontWeight: FontWeight.w500),
             ),
-            SizedBox(
-              height: 10,
+            subtitle:
+                Text(Strings.shownoti1),
+            trailing: Switch(
+              onChanged: toggleSwitch,
+              value: isSwitched,
+              activeColor: ColorConstants.kPrimaryColor,
+              activeTrackColor: ColorConstants.kPrimaryColor,
+              inactiveThumbColor: ColorConstants.kSecondaryColor,
+              inactiveTrackColor: ColorConstants.kSecondaryColor,
             ),
-            ListTile(
-              title: Text(
-                "Reaction Notifications",
-                style: TextStyle(fontWeight: FontWeight.w500),
-              ),
-              subtitle: Text(
-                  "Show notifications for reactions to \n  messages you send"),
-              trailing: Switch(
-                onChanged: toggleSwitch,
-                value: isSwitched,
-                activeColor: Colors.green,
-                activeTrackColor: Colors.green,
-                inactiveThumbColor: Colors.grey,
-                inactiveTrackColor: Colors.grey,
-              ),
+          ),
+          ListTile(
+            title: Text(
+              Strings.reaction,
+              style: TextStyle(fontWeight: FontWeight.w500),
             ),
-            Divider(
-                height: 20, thickness: 1, indent: 4, color: Colors.grey[100]),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(20, 20, 0, 0),
-              child: Container(
-                height: 33,
-                width: MediaQuery.of(context).size.width,
-                child: Text(
-                  "Calls",
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold, color: Colors.grey),
-                ),
-              ),
+            subtitle: Text(
+                Strings.shownoti),
+            trailing: Switch(
+              onChanged: toggleSwitch,
+              value: isSwitched,
+              activeColor: ColorConstants.kPrimaryColor,
+              activeTrackColor: ColorConstants.kPrimaryColor,
+              inactiveThumbColor: ColorConstants.kSecondaryColor,
+              inactiveTrackColor: ColorConstants.kSecondaryColor,
             ),
-            ListTile(
-              title: Text(
-                "Ringtone",
-                style: TextStyle(fontWeight: FontWeight.w500),
-              ),
-              subtitle: Text("Deafult(Pachainirame.mp3"),
-            ),
-            ListTile(
-              title: Text(
-                "Vibrate",
-                style: TextStyle(fontWeight: FontWeight.w500),
-              ),
-              subtitle: Text("Default"),
-            ),
-          ]),
-        ),
+          ),
+        ],
       ),
-    );
+    ));
   }
 }

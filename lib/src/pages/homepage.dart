@@ -4,14 +4,14 @@ import 'package:whatsup/src/features/chat/chatlist_widget.dart';
 import 'package:whatsup/src/features/community/CommunityListWidget.dart';
 import 'package:whatsup/src/features/status/StatusListWidget.dart';
 
-class homepage extends StatefulWidget {
-  const homepage({super.key});
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
 
   @override
-  State<homepage> createState() => _homepageState();
+  State<HomePage> createState() => _HomePageState();
 }
 
-class _homepageState extends State<homepage> {
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
