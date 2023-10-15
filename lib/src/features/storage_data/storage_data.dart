@@ -1,30 +1,35 @@
 import 'package:flutter/material.dart';
+import 'package:whatsup/src/core/color/color.dart';
+import 'package:whatsup/src/core/theme/text_theme.dart';
+import 'package:whatsup/src/widgets/divider.dart';
+
+import '../../core/constants/strings.dart';
 
 
-class Storageanddata extends StatefulWidget {
-  Storageanddata({super.key});
+class StorageandData extends StatefulWidget {
+  StorageandData({super.key});
 
   @override
-  State<Storageanddata> createState() => _Storageanddata();
+  State<StorageandData> createState() => _StorageandData();
 }
 
-class _Storageanddata extends State<Storageanddata> {
+class _StorageandData extends State<StorageandData> {
   bool isSwitched = false;
-  var textValue = 'Switch is OFF';
+  var textValue = Strings.switchoff;
 
   void toggleSwitch(bool value) {
-    if (isSwitched == false) {
+    if (!isSwitched == false) {
       setState(() {
         isSwitched = true;
-        textValue = 'Switch Button is ON';
+        textValue = Strings.switchon;
       });
-      print('Switch Button is ON');
+      
     } else {
       setState(() {
         isSwitched = false;
-        textValue = 'Switch Button is OFF';
+        textValue = Strings.switchoff;
       });
-      print('Switch Button is OFF');
+ 
     }
   }
 
@@ -39,8 +44,8 @@ class _Storageanddata extends State<Storageanddata> {
                 onPressed: () {},
                 icon: Icon(Icons.arrow_back),
               ),
-              backgroundColor: Colors.teal[900],
-              title: Text("Storage and data"),
+              backgroundColor: ColorConstants.kPrimaryColor,
+              title: Text(Strings.storageanddatatxt),
             ),
             SizedBox(
               height: 20,
@@ -48,20 +53,19 @@ class _Storageanddata extends State<Storageanddata> {
             ListTile(
               leading: Icon(Icons.sd_storage),
               title: Text(
-                "Manage storage",
+                Strings.managestorage,
                 style: TextStyle(fontWeight: FontWeight.w500),
               ),
-              subtitle: Text("7.0 GB"),
+              subtitle: Text(Strings.text1),
             ),
-            Divider(
-                height: 20, thickness: 1, indent: 4, color: Colors.grey[100]),
+            DividerX.divider,
             ListTile(
               leading: Icon(Icons.network_cell),
               title: Text(
-                "Network usage",
+                Strings.networkandstorage,
                 style: TextStyle(fontWeight: FontWeight.w500),
               ),
-              subtitle: Text("24.5 MB sent - 1.3 GB received"),
+              subtitle: Text(Strings.subtxt1),
             ),
             SizedBox(
               height: 10,
@@ -70,65 +74,64 @@ class _Storageanddata extends State<Storageanddata> {
               trailing: Switch(
                 onChanged: toggleSwitch,
                 value: isSwitched,
-                activeColor: Colors.green,
-                activeTrackColor: Colors.green,
-                inactiveThumbColor: Colors.grey,
-                inactiveTrackColor: Colors.grey,
+                activeColor: ColorConstants.kPrimaryColor,
+                activeTrackColor: ColorConstants.kPrimaryColor,
+                inactiveThumbColor: ColorConstants.kSecondaryColor,
+                inactiveTrackColor: ColorConstants.kSecondaryColor,
               ),
               title: Text(
-                "User less data for calls",
+                Strings.txt2,
                 
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
             ),
             ListTile(
               title: Text(
-                "Proxy",
-                style: TextStyle(fontWeight: FontWeight.w500),
+                Strings.txt3,
+                style: AppTextTheme.titleTextStyle,
               ),
-              subtitle: Text("off"),
+              subtitle: Text(Strings.off),
               
             ),
-            Divider(
-                height: 20, thickness: 1, indent: 4, color: Colors.grey[100]),
+            DividerX.divider,
             Padding(
               padding: const EdgeInsets.fromLTRB(20, 20, 0, 0),
               child: Container(
                 height: 33,
                 width: MediaQuery.of(context).size.width,
                 child: Text(
-                  "Media auto-download",
+                  Strings.mediaautodwnld,
                   style: TextStyle(
-                      fontWeight: FontWeight.bold, color: Colors.grey),
+                      fontWeight: FontWeight.bold, color: ColorConstants.kSecondaryColor),
                 ),
               ),
             ),
             ListTile(
               title: Text(
-                "When using mobile data",
+                Strings.mobiledata,
                 style: TextStyle(fontWeight: FontWeight.w500),
               ),
-              subtitle: Text("Photos"),
+              subtitle: Text(Strings.photos),
             ),
             SizedBox(
               height: 10,
             ),
             ListTile(
               title: Text(
-                "When connected to Wi-Fi",
+                Strings.wifi,
                 style: TextStyle(fontWeight: FontWeight.w500),
               ),
-              subtitle: Text("Photos"),
+              subtitle: Text(Strings.photos),
             ),
             SizedBox(
               height: 10,
             ),
             ListTile(
               title: Text(
-                "When Roaming",
+                Strings.roaming,
                 style: TextStyle(fontWeight: FontWeight.w500),
               ),
-              subtitle: Text("No media"),
+              subtitle: Text(Strings.nomedia),
             ),
           ]),
         ),
