@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../core/Constants/Strings.dart';
+
 class SearchScreen extends StatefulWidget {
   @override
   _SearchScreenState createState() => _SearchScreenState();
@@ -16,13 +18,14 @@ class _SearchScreenState extends State<SearchScreen> {
   Widget build(BuildContext context) {
     List<Chip> chips = [
       Chip(
-        label: Text('Recent'),
+        label: Text(Strings.Recent),
+
       ),
       Chip(
-        label: Text('Contacts'),
+        label: Text(Strings.Contacts),
       ),
       Chip(
-        label: Text('Groups'),
+        label: Text(Strings.Groups),
       ),
     ];
     return Scaffold(

@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-
 class SettingsTile extends StatelessWidget {
   final String title;
   final Icon leading;
@@ -24,4 +23,5 @@ class SettingsTile extends StatelessWidget {
       trailing: trailing,
       onTap: onTap,
     );
-  }}
+  }
+}

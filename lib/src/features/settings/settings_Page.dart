@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:whatsup/src/features/settings/settings_title.dart';
-
-import 'ProfileList.dart';
+import 'package:whatsup/src/features/settings/settings_Title.dart';
+import '../../core/Constants/Strings.dart';
+import 'profile_List.dart';
 
 class SettingsMenu extends StatefulWidget {
   const SettingsMenu({Key? key}) : super(key: key);
@@ -11,15 +11,8 @@ class SettingsMenu extends StatefulWidget {
 }
 
 class _SettingsMenuState extends State<SettingsMenu> {
-  // void showSearchBar() {
-  //   showModalBottomSheet(
-  //     context: context,
-  //     builder: (context) => SearchBar(hintText: '', onSearch: () {  },),
-  //   );
-  // }
-
   void logout() {
-
+    //Write Logout Logic
   }
 
   @override
@@ -27,7 +20,7 @@ class _SettingsMenuState extends State<SettingsMenu> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.teal,
-        title: Text('Settings'),
+        title: Text(Strings.Settings),
         actions: [
           // IconButton(
           //   icon: Icon(Icons.search),
@@ -36,15 +29,22 @@ class _SettingsMenuState extends State<SettingsMenu> {
         ],
       ),
       body: ListView(
-        children: [SizedBox(height: 10,),
-          ProfileListTile(profilePhotoUrl: 'assets/images/rofile_photo.jpeg',
-            profileSubText: 'New to whats app',
-            profileName: 'Kiran lal K',
+        padding: EdgeInsets.only(bottom: 100),
+        children: [
+          SizedBox(
+            height: 10,
+          ),
+          ProfileListTile(
+            profilePhotoUrl: 'assets/images/rofile_photo.jpeg',
+            profileSubText: Strings.NewToWhatsApp,
+            profileName: Strings.ProfileName,
             // child: null,
-          ),SizedBox(height: 10,),
+          ),
+          SizedBox(
+            height: 10,
+          ),
           SettingsTile(
-            title: 'Notifications',
-
+            title: Strings.Notifications,
             leading: Icon(Icons.notifications),
             trailing: Icon(Icons.chevron_right),
             onTap: () {
@@ -52,7 +52,7 @@ class _SettingsMenuState extends State<SettingsMenu> {
             },
           ),
           SettingsTile(
-            title: 'Privacy',
+            title: Strings.Privacy,
             leading: Icon(Icons.privacy_tip),
             trailing: Icon(Icons.chevron_right),
             onTap: () {
@@ -60,7 +60,7 @@ class _SettingsMenuState extends State<SettingsMenu> {
             },
           ),
           SettingsTile(
-            title: 'Security',
+            title: Strings.Security,
             leading: Icon(Icons.security),
             trailing: Icon(Icons.chevron_right),
             onTap: () {
@@ -68,7 +68,7 @@ class _SettingsMenuState extends State<SettingsMenu> {
             },
           ),
           SettingsTile(
-            title: 'Theme',
+            title: Strings.Theme,
             leading: Icon(Icons.color_lens),
             trailing: Icon(Icons.chevron_right),
             onTap: () {
@@ -76,7 +76,7 @@ class _SettingsMenuState extends State<SettingsMenu> {
             },
           ),
           SettingsTile(
-            title: 'Chat wallpaper',
+            title: Strings.ChatWallpaper,
             leading: Icon(Icons.wallpaper),
             trailing: Icon(Icons.chevron_right),
             onTap: () {
@@ -84,7 +84,7 @@ class _SettingsMenuState extends State<SettingsMenu> {
             },
           ),
           SettingsTile(
-            title: 'Media auto-download',
+            title: Strings.MediaAutoDownload,
             leading: Icon(Icons.cloud_download),
             trailing: Icon(Icons.chevron_right),
             onTap: () {
@@ -92,7 +92,7 @@ class _SettingsMenuState extends State<SettingsMenu> {
             },
           ),
           SettingsTile(
-            title: 'Request account info',
+            title: Strings.RequestAccountInfo,
             leading: Icon(Icons.account_circle),
             trailing: Icon(Icons.chevron_right),
             onTap: () {
@@ -100,7 +100,7 @@ class _SettingsMenuState extends State<SettingsMenu> {
             },
           ),
           SettingsTile(
-            title: 'Keyboard shortcuts',
+            title: Strings.KeyboardShortcuts,
             leading: Icon(Icons.keyboard),
             trailing: Icon(Icons.chevron_right),
             onTap: () {
@@ -108,7 +108,7 @@ class _SettingsMenuState extends State<SettingsMenu> {
             },
           ),
           SettingsTile(
-            title: 'Help',
+            title: Strings.Help,
             leading: Icon(Icons.help),
             trailing: Icon(Icons.chevron_right),
             onTap: () {
@@ -116,7 +116,7 @@ class _SettingsMenuState extends State<SettingsMenu> {
             },
           ),
           SettingsTile(
-            title: 'Log out',
+            title: Strings.LogOut,
             leading: Icon(Icons.logout),
             onTap: logout,
           ),
@@ -125,4 +125,3 @@ class _SettingsMenuState extends State<SettingsMenu> {
     );
   }
 }
-

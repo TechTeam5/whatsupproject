@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:whatsup/src/features/chat/chatlist_widget.dart';
 
-import 'package:whatsup/src/features/settings/settings.dart';
+import 'package:whatsup/src/features/settings/settings_Page.dart';
 
+import '../../core/Constants/Strings.dart';
 import '../search/search_page.dart';
 
 class DashboardPage extends StatefulWidget {
@@ -27,42 +28,42 @@ class _DashboardPageState extends State<DashboardPage>
     return Scaffold(
       appBar: AppBar(
           backgroundColor: Color(0xff075e54),
-          title: Text("Whatsapp"),
+          title: Text(Strings.WhatsApp),
           actions: [
             IconButton(onPressed: () {
               Navigator.of(mainContext).push(MaterialPageRoute(
                   builder: (context) => SearchScreen()));
             }, icon: Icon(Icons.search)),
             PopupMenuButton<String>(onSelected: (value) {
-              if (value == "Settings") {
+              if (value == Strings.Settings) {
                 Navigator.of(mainContext).push(MaterialPageRoute(
                     builder: (context) => const SettingsMenu()));
               }
             }, itemBuilder: (BuildContext context) {
               return [
                 const PopupMenuItem(
-                  child: Text("New group"),
-                  value: "New group",
+                  child: Text(Strings.NewGroup),
+                  value: Strings.NewGroup,
                 ),
                 PopupMenuItem(
-                  child: Text("New broadcast"),
-                  value: "New broadcast",
+                  child: Text(Strings.NewBroadcast),
+                  value: Strings.NewBroadcast,
                 ),
                 PopupMenuItem(
-                  child: Text("Linked devices"),
-                  value: "Linked devices",
+                  child: Text(Strings.Linkeddevices),
+                  value: Strings.Linkeddevices,
                 ),
                 PopupMenuItem(
-                  child: Text("Starred messages"),
-                  value: "Starred messages",
+                  child: Text(Strings.Starredmessages),
+                  value: Strings.Starredmessages,
                 ),
                 PopupMenuItem(
-                  child: Text("Payments"),
-                  value: "Payments",
+                  child: Text(Strings.Payments),
+                  value: (Strings.Payments),
                 ),
                 PopupMenuItem(
-                  child: Text("Settings"),
-                  value: "Settings",
+                  child: Text(Strings.Settings),
+                  value: Strings.Settings,
                 ),
               ];
             })
@@ -80,14 +81,14 @@ class _DashboardPageState extends State<DashboardPage>
                   ),
                 ),
                 Tab(
-                  text: "Chats",
+                  text: Strings.Chats,
 
                 ),
                 Tab(
-                  text: "Status",
+                  text: Strings.Status,
                 ),
                 Tab(
-                  text: "Calls",
+                  text: Strings.Calls,
                 ),
               ])),
       body: SafeArea(
