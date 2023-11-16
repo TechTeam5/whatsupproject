@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:whatsup/src/features/chat/chat_list_icon_widget.dart';
+
+import 'chat_list_icon_widget.dart';
+
 
 class ChatListWiget extends StatelessWidget {
   const ChatListWiget({super.key});
