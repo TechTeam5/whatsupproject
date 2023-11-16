@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:whatsup/src/core/helper/datetime-helper.dart';
-import 'package:whatsup/src/core/theme/text_theme.dart';
+
+import '../../core/helper/datetime-helper.dart';
+import '../../core/theme/text_theme.dart';
+
 
 class ChatListIconWidget extends StatelessWidget {
   final String title;
