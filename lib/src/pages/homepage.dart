@@ -3,6 +3,7 @@ import 'package:whatsup/src/features/calls/CallListWidget.dart';
 import 'package:whatsup/src/features/chat/chatlist_widget.dart';
 import 'package:whatsup/src/features/community/community_list_widget.dart';
 import 'package:whatsup/src/features/status/StatusListWidget.dart';
+import 'package:whatsup/src/whatsapp/strings.dart';
 
 class homepage extends StatefulWidget {
   const homepage({super.key});
@@ -19,13 +20,13 @@ class _homepageState extends State<homepage> {
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.green,
-          title: Text('WhatsApp'),
+          title: Text(Strings.whatsapp),
           bottom: TabBar(
             tabs: [
               Tab(icon: Icon(Icons.account_circle),),
-              Tab(text: 'Chat'),
-              Tab(text: 'Status',),
-              Tab(text: 'Calls',)
+              Tab(text: Strings.chat),
+              Tab(text: Strings.status,),
+              Tab(text: Strings.call,)
             ],
           ),
         ),

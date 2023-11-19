@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../whatsapp/strings.dart';
+
 class SettingOption extends StatelessWidget {
   final String title;
   final String subtitle;
@@ -37,7 +39,7 @@ class CommunityListWidget extends StatelessWidget {
       body: ListView(
         children: [
           SettingOption(
-            title: 'New community',
+            title: Strings.newcommunity,
             subtitle: '',
             onTap: () {
               // Navigate to the account settings screen
@@ -46,7 +48,7 @@ class CommunityListWidget extends StatelessWidget {
           ),
           // Account
           SettingOption(
-            title: 'Cusat Updates',
+            title: Strings.cus,
             subtitle: '',
             onTap: () {
               // Navigate to the account settings screen
@@ -57,8 +59,8 @@ class CommunityListWidget extends StatelessWidget {
 
           // Privacy
           SettingOption(
-            title: 'Announcement',
-            subtitle: '+91 8330863172 joined using this group invite link',
+            title: Strings.Announcement,
+            subtitle: Strings.num,
             onTap: () {
               // Navigate to the privacy settings screen
             },
